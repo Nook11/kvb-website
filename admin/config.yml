@@ -1,18 +1,25 @@
+# บรรทัดนี้ต้องอยู่ชิดซ้ายสุด
 backend:
+  # ย่อหน้าด้วย 2 space
   name: git-gateway
-  branch: main # หรือ master แล้วแต่ชื่อ Branch หลักของคุณ
+  branch: main
 
-media_folder: "imges" # บอกว่ารูปที่อัปโหลดใหม่จะไปอยู่ที่โฟลเดอร์ imges
+# บรรทัดนี้ต้องอยู่ชิดซ้ายสุด
+media_folder: "imges"
 public_folder: "/imges"
 
+# บรรทัดนี้ต้องอยู่ชิดซ้ายสุด
 collections:
-  - name: "pages" # ตั้งชื่อกลุ่มของเนื้อหา
-    label: "Page Content" # ชื่อที่จะแสดงในระบบหลังบ้าน
+  # ย่อหน้าด้วย 2 space
+  - name: "pages"
+    label: "Page Content"
     files:
-      - file: "index.html" # ระบุว่าเราจะแก้ไขไฟล์ index.html
-        label: "Homepage" # ชื่อของหน้านี้ในระบบหลังบ้าน
+      # ย่อหน้าด้วย 4 space
+      - file: "index.html"
+        label: "Homepage"
         name: "homepage"
-        fields: # รายการช่องข้อมูลที่จะให้ Admin แก้ไข
-          - {label: "Hero Title", name: "hero_title", widget: "string"}
-          - {label: "Hero Subtitle", name: "hero_subtitle", widget: "text"}
-          - {label: "Hero Logo", name: "hero_logo", widget: "image"}
+        fields: # ย่อหน้าด้วย 6 space
+          # ย่อหน้าด้วย 8 space
+          - { label: "หัวข้อหลัก", name: "hero_title", widget: "string" }
+          - { label: "คำโปรย", name: "hero_subtitle", widget: "text" }
+          - { label: "โลโก้กลางหน้า", name: "hero_logo", widget: "image" }
