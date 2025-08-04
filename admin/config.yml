@@ -1,25 +1,53 @@
-# บรรทัดนี้ต้องอยู่ชิดซ้ายสุด
+# --- การตั้งค่าพื้นฐาน ---
 backend:
-  # ย่อหน้าด้วย 2 space
   name: git-gateway
-  branch: main
+  branch: main # หรือ master ถ้า Branch หลักของคุณชื่อ master
 
-# บรรทัดนี้ต้องอยู่ชิดซ้ายสุด
-media_folder: "imges"
+media_folder: "imges" # โฟลเดอร์สำหรับเก็บรูปที่อัปโหลดใหม่
 public_folder: "/imges"
 
-# บรรทัดนี้ต้องอยู่ชิดซ้ายสุด
+# --- กลุ่มของเนื้อหาที่แก้ไขได้ ---
 collections:
-  # ย่อหน้าด้วย 2 space
-  - name: "pages"
-    label: "Page Content"
+  - name: "pages" # ชื่อของ Collection
+    label: "Page Content" # ชื่อที่จะแสดงในเมนูหลังบ้าน
     files:
-      # ย่อหน้าด้วย 4 space
+      # --- ตั้งค่าสำหรับหน้า Homepage (index.html) ---
       - file: "index.html"
         label: "Homepage"
         name: "homepage"
-        fields: # ย่อหน้าด้วย 6 space
-          # ย่อหน้าด้วย 8 space
-          - { label: "หัวข้อหลัก", name: "hero_title", widget: "string" }
-          - { label: "คำโปรย", name: "hero_subtitle", widget: "text" }
-          - { label: "โลโก้กลางหน้า", name: "hero_logo", widget: "image" }
+        fields:
+          - { label: "Hero: หัวข้อหลัก", name: "hero_title", widget: "string" }
+          - { label: "Hero: คำโปรย", name: "hero_subtitle", widget: "text" }
+          - { label: "Hero: โลโก้กลางหน้า", name: "hero_logo", widget: "image" }
+          - { label: "Hero: อีเมลสำหรับติดต่อ", name: "hero_email", widget: "string" }
+          - { label: "Parts Section: หัวข้อ", name: "parts_title", widget: "string" }
+          - { label: "Parts Section: เนื้อหา", name: "parts_content", widget: "markdown" }
+          - { label: "Parts Section: รูปภาพ", name: "parts_image", widget: "image" }
+
+      # --- ตั้งค่าสำหรับหน้า Service 2 (service2.html) ---
+      - file: "service2.html"
+        label: "Air Condition Service Page"
+        name: "service_aircon"
+        fields:
+          - { label: "Header: หัวข้อ", name: "header_title_service2", widget: "string" }
+          - { label: "Header: คำโปรย", name: "header_subtitle_service2", widget: "string" }
+          - { label: "Card 1: รูปภาพ", name: "card1_image_service2", widget: "image" }
+          - { label: "Card 1: หัวข้อ", name: "card1_title_service2", widget: "string" }
+          - { label: "Card 1: เนื้อหา", name: "card1_content_service2", widget: "string" }
+          - { label: "Card 1: รายการ (1 ข้อต่อ 1 บรรทัด)", name: "card1_list_service2", widget: "textarea" }
+          - { label: "Card 2: รูปภาพ", name: "card2_image_service2", widget: "image" }
+          - { label: "Card 2: หัวข้อ", name: "card2_title_service2", widget: "string" }
+          - { label: "Card 2: เนื้อหา", name: "card2_content_service2", widget: "string" }
+          - { label: "Card 2: รายการ (1 ข้อต่อ 1 บรรทัด)", name: "card2_list_service2", widget: "textarea" }
+
+      # --- ตั้งค่าสำหรับหน้า Service 3 (service3.html) ---
+      - file: "service3.html"
+        label: "Training Course Page"
+        name: "service_training"
+        fields:
+          - { label: "Header: หัวข้อ", name: "header_title_service3", widget: "string" }
+          - { label: "Header: คำโปรย", name: "header_subtitle_service3", widget: "string" }
+          - { label: "Main: รูปภาพ", name: "main_image_service3", widget: "image" }
+          - { label: "Main: หัวข้อ", name: "main_title_service3", widget: "string" }
+          - { label: "Objectives: รายการวัตถุประสงค์ (1 ข้อต่อ 1 บรรทัด)", name: "objectives_list_service3", widget: "textarea" }
+          - { label: "Outline: รายการเนื้อหาหลักสูตร (1 ข้อต่อ 1 บรรทัด)", name: "outline_list_service3", widget: "textarea" }
