@@ -12,6 +12,7 @@ collections:
       - file: "index.html"
         label: "Homepage"
         name: "homepage"
+        preview_path: "index.html"
         fields:
           - { label: "Hero: Logo", name: "hero_logo", widget: "image" }
           - { label: "Hero: Main Title", name: "hero_title", widget: "string" }
@@ -29,6 +30,7 @@ collections:
       - file: "service2.html"
         label: "Air Condition Service Page"
         name: "service_aircon"
+        preview_path: "service2.html" 
         fields:
           - { label: "Header: Title", name: "header_title_s2", widget: "string" }
           - { label: "Header: Subtitle", name: "header_subtitle_s2", widget: "string" }
@@ -44,6 +46,7 @@ collections:
       - file: "service3.html"
         label: "Training Course Page"
         name: "service_training"
+        preview_path: "service3.html"
         fields:
           - { label: "Header: Title", name: "header_title_s3", widget: "string" }
           - { label: "Header: Subtitle", name: "header_subtitle_s3", widget: "string" }
