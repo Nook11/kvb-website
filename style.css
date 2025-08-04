@@ -1,11 +1,11 @@
-/* --- 1. General Setup & Variables --- */
+
 @import url('https://fonts.googleapis.com/css2?family=Sarabun:wght@400;500;700&display=swap');
 
 :root {
-    --bs-primary: #005A9C; /* สีน้ำเงินหลัก */
+    --bs-primary: #005A9C;
     --bs-primary-rgb: 0, 90, 156;
-    --bs-light: #f0f5f9; /* สีเทาอมฟ้าอ่อนสำหรับพื้นหลังสลับ */
-    --bs-dark: #212529; /* สีเทาเข้มสำหรับข้อความ */
+    --bs-light: #f0f5f9; 
+    --bs-dark: #212529; 
     --border-radius: 0.75rem;
     --box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
     --box-shadow-sm: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.08);
@@ -21,10 +21,10 @@ body {
     background-image: url('imges/blue gradient travel (Presentation (169)).png');
     background-size: cover;
     background-position: center center;
-    background-attachment: fixed; /* ทำให้พื้นหลังอยู่กับที่เมื่อ scroll */
+    background-attachment: fixed; 
     
     /* --- UPDATED: Text Color --- */
-    color: #f8f9fa; /* เปลี่ยนสีตัวอักษรพื้นฐานเป็นสีขาวอมเทาให้อ่านง่าย */
+    color: #f8f9fa; 
 }
 
 /* --- NEW: Black Gradient Overlay --- */
@@ -35,19 +35,19 @@ body::before {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(10, 25, 47, 0.7); /* สีน้ำเงินเข้มโปร่งแสง 70% */
-    z-index: -1; /* ส่ง Overlay ไปไว้ข้างหลังสุด */
+    background-color: rgba(10, 25, 47, 0.7); 
+    z-index: -1; 
 }
 
 
 /* --- UPDATED: ทำให้ Section โปร่งใส --- */
 main > section, header {
     padding: 5rem 0; 
-    background-color: transparent !important; /* ทำให้พื้นหลัง Section โปร่งใส */
+    background-color: transparent !important; 
 }
-/* ทำให้ Section ที่ 2, 4, 6... มีพื้นหลังโปร่งใส */
+
 main > section:nth-of-type(even) {
-    background-color: transparent !important; /* ทำให้พื้นหลัง Section โปร่งใส */
+    background-color: transparent !important; 
 }
 
 /* --- 2. Navbar --- */
@@ -102,21 +102,21 @@ main > section:nth-of-type(even) {
     box-shadow: 0 5px 20px rgba(var(--bs-primary-rgb), 0.5);
 }
 
-/* --- ปรับสีตัวอักษรปุ่มเบอร์โทรเป็นสีเทา --- */
+
 .navbar .nav-item .btn-primary {
     color: #0080ff !important; /* !important ใช้เพื่อให้แสดงผลทับสไตล์เดิมของ Bootstrap */
 }
 
-/* ทำให้ตัวอักษรกลับเป็นสีขาวเมื่อ hover เพื่อให้อ่านง่ายขึ้น */
+
 .navbar .nav-item .btn-primary:hover {
     color: #0080ff !important;
 }
 
-/* --- 3. Hero Section --- */
+
 .hero-section {
     background-color: var(--bs-primary);
     color: #ffffff;
-    padding: 10rem 0 8rem 0; /* รวม padding-top และ padding เดิมเข้าด้วยกัน */
+    padding: 10rem 0 8rem 0; 
     overflow: hidden;
 }
 .hero-section .lead {
@@ -156,14 +156,14 @@ main > section:nth-of-type(even) {
     border: 1px solid #e9ecef;
     animation: fadeInUp 0.8s ease-out;
     transition: all 0.3s ease;
-    overflow: hidden; /* NEW: สำคัญมากสำหรับเอฟเฟกต์ซูมรูปภาพ */
+    overflow: hidden; 
 }
 .card:hover {
     transform: translateY(-8px);
     box-shadow: var(--box-shadow);
     border-color: var(--bs-primary);
 }
-/* NEW GIMMICK: ทำให้รูปภาพในการ์ดซูมเข้าเมื่อ hover ที่การ์ด */
+
 .card .img-fluid {
     transition: transform 0.4s ease;
 }
@@ -171,7 +171,7 @@ main > section:nth-of-type(even) {
     transform: scale(1.05);
 }
 
-/* --- 5. Specific Components --- */
+
 
 /* Image Slider */
 header .carousel-inner, header .carousel-item img {
@@ -267,24 +267,24 @@ footer .bi-facebook { color: #1877F2; }
 /* ปรับสีของลูกศรเลื่อน (prev / next) */
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-    background-color: var(--bs-primary); /* ใช้สีน้ำเงินหลัก */
+    background-color: var(--bs-primary); 
     border-radius: 50%;
     padding: 1rem;
 }
 
 /* ปรับสีจุดสไลด์ (indicators) */
 .carousel-indicators [data-bs-target] {
-    background-color: rgba(0, 90, 156, 0.3); /* สีพื้นจาง */
+    background-color: rgba(0, 90, 156, 0.3);
 }
 .carousel-indicators .active {
-    background-color: var(--bs-primary); /* สีหลักเมื่อ active */
-}
-/* --- ทำให้ Services Overview Section มีพื้นหลังสีน้ำเงิน --- */
-.services-overview-section {
-    background-color: var(--bs-primary) !important; /* !important เพื่อให้แสดงผลทับสไตล์โปร่งใสเดิม */
+    background-color: var(--bs-primary);
 }
 
-/* ปรับสีตัวอักษรใน Section นี้ให้เป็นสีขาวเพื่อให้อ่านง่าย */
+.services-overview-section {
+    background-color: var(--bs-primary) !important; 
+}
+
+
 .services-overview-section h2 {
     color: #ffffff;
 }
@@ -292,7 +292,7 @@ footer .bi-facebook { color: #1877F2; }
     color: rgba(255, 255, 255, 0.75) !important;
 }
 
-/* ปรับสไตล์ปุ่มใน Section นี้ให้ตัดกับพื้นหลังสีน้ำเงิน */
+
 .services-overview-section .btn-primary {
     background-color: #ffffff;
     border-color: #ffffff;
@@ -303,7 +303,7 @@ footer .bi-facebook { color: #1877F2; }
     color: #ffffff;
 }
 
-/* ปรับสไตล์ปุ่มตอน Hover */
+
 .services-overview-section .btn-primary:hover {
     background-color: var(--bs-light); /* สีเทาอ่อน */
     border-color: var(--bs-light);
@@ -314,11 +314,11 @@ footer .bi-facebook { color: #1877F2; }
     color: var(--bs-primary);
 }
 
-/* --- ทำให้ Partners Section มีพื้นหลังสีขาว --- */
+
 .partners-section {
     background-color: #ffffff !important; /* !important เพื่อให้แสดงผลทับสไตล์โปร่งใสเดิม */
 }
-/* --- เปลี่ยนสีตัวอักษรใน Partners Section --- */
+
 .partners-section h2 {
     color: var(--bs-dark); 
 }
@@ -340,4 +340,5 @@ footer .bi-facebook { color: #1877F2; }
 
 .service-page-section .card:nth-of-type(2) {
     animation-delay: 0.3s;
+
 }
