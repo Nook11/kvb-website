@@ -4,7 +4,7 @@ backend:
 
 media_folder: "imges"
 public_folder: "/imges"
-
+preview_styles: ["/style.css"]
 collections:
   - name: "pages"
     label: "Page Content"
