@@ -1,0 +1,60 @@
+---
+layout: layout.njk
+title: หลักสูตรอบรมช่างแอร์ - KVG Co., Ltd.
+description: หลักสูตรอบรมช่างแอร์ เน้นปฏิบัติจริง พัฒนาศักยภาพบุคลากรให้เป็นมืออาชีพ
+keywords: สอนช่างแอร์, อบรมช่างแอร์, หลักสูตรช่างแอร์
+header_title: "Air Condition Training"
+header_subtitle: "พัฒนาศักยภาพบุคลากรให้มีความรู้ความสามารถด้านเครื่องปรับอากาศอย่างมืออาชีพ"
+card_title: "หลักสูตรอบรมช่างเครื่องปรับอากาศ (เน้นปฏิบัติ)"
+card_image: "/imges/8519920d741af9b3927d13eb21133eb6.jpg"
+objectives_title: "วัตถุประสงค์"
+objectives_list:
+  - "เพื่อสร้างทีมงานช่างเครื่องปรับอากาศภายในบริษัท"
+  - "เพื่อลดค่าใช้จ่ายในการบำรุงรักษาและซ่อมแซมจากภายนอก"
+outline_title: "เนื้อหาหลักสูตร"
+outline_list:
+  - "ความรู้ที่จำเป็นในระบบเครื่องปรับอากาศ"
+  - "อุปกรณ์หลักในระบบเครื่องปรับอากาศ"
+  - "เครื่องมือวัดและการใช้งาน"
+  - "ชนิดของน้ำยาแอร์ที่ใช้ในปัจจุบัน"
+  - "ความรู้พื้นฐานเกี่ยวกับระบบไฟฟ้า"
+  - "การวิเคราะห์ปัญหาและแนวทางการแก้ไข"
+  - "ความปลอดภัยในการทำงานกับเครื่องปรับอากาศ"
+---
+
+<section>
+    <div class="container">
+        <div class="service-header text-white text-center mb-5">
+           <i class="bi bi-person-video3 fs-1 mb-2"></i>
+           <h1 class="fw-bold">{{ header_title }}</h1>
+           <p class="lead">{{ header_subtitle }}</p>
+       </div>
+        <div class="card p-4 p-md-5">
+            <div class="row g-5">
+                <div class="col-lg-7">
+                    <h3 class="fw-bold mb-3 text-primary">{{ card_title }}</h3>
+                    <div class="mt-4">
+                        <h5 class="fw-bold">{{ objectives_title }}</h5>
+                        <ul class="list-unstyled">
+                            {% for item in objectives_list %}
+                                <li><i class="bi bi-check-circle-fill text-success me-2"></i>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+
+                    <div class="mt-4">
+                        <h5 class="fw-bold">{{ outline_title }}</h5>
+                        <ul class="list-group list-group-flush">
+                            {% for item in outline_list %}
+                                <li class="list-group-item">{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-5 align-self-center">
+                    <img src="{{ card_image }}" class="img-fluid rounded shadow" alt="{{ card_title }}">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
