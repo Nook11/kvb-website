@@ -41,13 +41,43 @@ body::before {
 
 
 /* --- UPDATED: ทำให้ Section โปร่งใส --- */
-main > section, header {
-    padding: 5rem 0; 
-    background-color: transparent !important; 
+/* --- NEW: Section Styling --- */
+.page-section {
+    padding: 5rem 0;
 }
-
-main > section:nth-of-type(even) {
-    background-color: transparent !important; 
+.section-bg-white {
+    background-color: #ffffff;
+    color: var(--bs-dark);
+}
+.section-bg-white .text-muted {
+    color: #6c757d !important;
+}
+.section-bg-light {
+    background-color: var(--bs-light);
+    color: var(--bs-dark);
+}
+.section-bg-light .text-muted {
+    color: #6c757d !important;
+}
+.section-bg-primary {
+    background-color: var(--bs-primary);
+    color: #ffffff;
+}
+.section-bg-primary h2, .section-bg-primary .text-muted {
+    color: #ffffff !important;
+}
+.section-bg-primary .btn-primary {
+    background-color: #ffffff;
+    border-color: #ffffff;
+    color: var(--bs-primary);
+}
+.section-bg-primary .btn-outline-primary {
+    border-color: #ffffff;
+    color: #ffffff;
+}
+.section-bg-primary .btn-outline-primary:hover {
+    background-color: #ffffff;
+    color: var(--bs-primary);
 }
 
 /* --- 2. Navbar --- */
@@ -342,3 +372,4 @@ footer .bi-facebook { color: #1877F2; }
     animation-delay: 0.3s;
 
 }
+
