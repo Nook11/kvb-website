@@ -9,49 +9,61 @@ collections:
   - name: "pages"
     label: "Page Content"
     files:
-   
-      - file: "index.njk"
-        label: "Homepage"
+      # --- Homepage Settings (index.njk) ---
+      - label: "Homepage"
         name: "homepage"
+        file: "index.njk"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "layout.njk" }
           - { label: "Title Tag", name: "title", widget: "string", required: false }
+          - { label: "Meta Description", name: "description", widget: "text", required: false }
+          - { label: "Meta Keywords", name: "keywords", widget: "string", required: false }
           - { label: "Hero: Logo", name: "hero_logo", widget: "image", required: false }
           - { label: "Hero: Main Title", name: "hero_title", widget: "string", required: false }
           - { label: "Hero: Subtitle", name: "hero_subtitle", widget: "text", required: false }
           - { label: "Hero: Email Text", name: "hero_email_text", widget: "string", required: false }
-       
+          - { label: "Machine Parts: Title", name: "parts_title", widget: "string", required: false }
+          - { label: "Machine Parts: Description (HTML allowed)", name: "parts_description", widget: "markdown", required: false }
+          - { label: "Machine Parts: Brands Title", name: "parts_brands_title", widget: "string", required: false }
+          - { label: "Machine Parts: Brands List", name: "parts_brands_list", widget: "list", required: false }
+          - { label: "Machine Parts: Image", name: "parts_image", widget: "image", required: false }
+          - { label: "Partners Section: Title", name: "partners_title", widget: "string", required: false }
+          - { label: "Partners Section: Subtitle", name: "partners_subtitle", widget: "string", required: false }
 
-     
-      - file: "service2.njk"
-        label: "Air Condition Service Page"
+      # --- Air-Con Service Page Settings (service2.njk) ---
+      - label: "Air Condition Service Page"
         name: "service_aircon"
+        file: "service2.njk"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "layout.njk" }
           - { label: "Title Tag", name: "title", widget: "string", required: false }
-          - { label: "Header: Title", name: "header_title_s2", widget: "string", required: false }
-          - { label: "Header: Subtitle", name: "header_subtitle_s2", widget: "string", required: false }
-          - { label: "Card 1 (Cleaning): Image", name: "card1_image_s2", widget: "image", required: false }
-          - { label: "Card 1 (Cleaning): Title", name: "card1_title_s2", widget: "string", required: false }
-          - { label: "Card 1 (Cleaning): Description", name: "card1_desc_s2", widget: "string", required: false }
-          - { label: "Card 1 (Cleaning): List (1 per line)", name: "card1_list_s2", widget: "textarea", required: false }
-          - { label: "Card 2 (Repair): Image", name: "card2_image_s2", widget: "image", required: false }
-          - { label: "Card 2 (Repair): Title", name: "card2_title_s2", widget: "string", required: false }
-          - { label: "Card 2 (Repair): Description", name: "card2_desc_s2", widget: "string", required: false }
-          - { label: "Card 2 (Repair): List (1 per line)", name: "card2_list_s2", widget: "textarea", required: false }
+          - { label: "Meta Description", name: "description", widget: "text", required: false }
+          - { label: "Meta Keywords", name: "keywords", widget: "string", required: false }
+          - { label: "Header: Title", name: "header_title", widget: "string", required: false }
+          - { label: "Header: Subtitle", name: "header_subtitle", widget: "string", required: false }
+          - { label: "Card 1 (Cleaning): Image", name: "card1_image", widget: "image", required: false }
+          - { label: "Card 1 (Cleaning): Title", name: "card1_title", widget: "string", required: false }
+          - { label: "Card 1 (Cleaning): Description", name: "card1_desc", widget: "string", required: false }
+          - { label: "Card 1 (Cleaning): List", name: "card1_list", widget: "list", required: false }
+          - { label: "Card 2 (Repair): Image", name: "card2_image", widget: "image", required: false }
+          - { label: "Card 2 (Repair): Title", name: "card2_title", widget: "string", required: false }
+          - { label: "Card 2 (Repair): Description", name: "card2_desc", widget: "string", required: false }
+          - { label: "Card 2 (Repair): List", name: "card2_list", widget: "list", required: false }
 
-   
-      - file: "service3.njk"
-        label: "Training Course Page"
+      # --- Training Course Page Settings (service3.njk) ---
+      - label: "Training Course Page"
         name: "service_training"
+        file: "service3.njk"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "layout.njk" }
           - { label: "Title Tag", name: "title", widget: "string", required: false }
-          - { label: "Header: Title", name: "header_title_s3", widget: "string", required: false }
-          - { label: "Header: Subtitle", name: "header_subtitle_s3", widget: "string", required: false }
-          - { label: "Main: Image", name: "main_image_s3", widget: "image", required: false }
-          - { label: "Main: Title", name: "main_title_s3", widget: "string", required: false }
-          - { label: "Objectives: Title", name: "objectives_title_s3", widget: "string", required: false }
-          - { label: "Objectives: List (1 per line)", name: "objectives_list_s3", widget: "textarea", required: false }
-          - { label: "Outline: Title", name: "outline_title_s3", widget: "string", required: false }
-          - { label: "Outline: List (1 per line)", name: "outline_list_s3", widget: "textarea", required: false }
+          - { label: "Meta Description", name: "description", widget: "text", required: false }
+          - { label: "Meta Keywords", name: "keywords", widget: "string", required: false }
+          - { label: "Header: Title", name: "header_title", widget: "string", required: false }
+          - { label: "Header: Subtitle", name: "header_subtitle", widget: "string", required: false }
+          - { label: "Card: Title", name: "card_title", widget: "string", required: false }
+          - { label: "Card: Image", name: "card_image", widget: "image", required: false }
+          - { label: "Objectives: Title", name: "objectives_title", widget: "string", required: false }
+          - { label: "Objectives: List", name: "objectives_list", widget: "list", required: false }
+          - { label: "Outline: Title", name: "outline_title", widget: "string", required: false }
+          - { label: "Outline: List", name: "outline_list", widget: "list", required: false }
