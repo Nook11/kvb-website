@@ -5,8 +5,8 @@ backend:
 media_folder: "imges"
 public_folder: "/imges"
 
-# เปิดใช้งาน Preview โดยให้โหลด CSS ไปใช้ด้วย
-preview_styles: ["/style.css"]
+editor:
+  preview_styles: ["/style.css"]
 
 collections:
   - name: "pages"
