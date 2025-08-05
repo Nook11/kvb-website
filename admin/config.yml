@@ -4,6 +4,8 @@ backend:
 
 media_folder: "imges"
 public_folder: "/imges"
+
+# เปิดใช้งาน Preview โดยให้โหลด CSS ไปใช้ด้วย
 preview_styles: ["/style.css"]
 
 collections:
@@ -14,7 +16,7 @@ collections:
       - label: "Homepage"
         name: "homepage"
         file: "index.njk"
-        preview_path: "index.html"
+        preview_path: "/" # <-- แก้ไขตรงนี้
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "layout.njk" }
           - { label: "Title Tag", name: "title", widget: "string", required: false, default: "" }
@@ -36,7 +38,7 @@ collections:
       - label: "Air Condition Service Page"
         name: "service_aircon"
         file: "service2.njk"
-        preview_path: "service2/index.html"
+        preview_path: "/service2/" # <-- แก้ไขตรงนี้
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "layout.njk" }
           - { label: "Title Tag", name: "title", widget: "string", required: false, default: "" }
@@ -57,7 +59,7 @@ collections:
       - label: "Training Course Page"
         name: "service_training"
         file: "service3.njk"
-        preview_path: "service3/index.html"
+        preview_path: "/service3/" # <-- แก้ไขตรงนี้
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "layout.njk" }
           - { label: "Title Tag", name: "title", widget: "string", required: false, default: "" }
