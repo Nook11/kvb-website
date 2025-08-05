@@ -13,6 +13,7 @@ collections:
       - label: "Homepage"
         name: "homepage"
         file: "index.njk"
+        preview_path: "index.html"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "layout.njk" }
           - { label: "Title Tag", name: "title", widget: "string", required: false, default: "" }
@@ -34,6 +35,7 @@ collections:
       - label: "Air Condition Service Page"
         name: "service_aircon"
         file: "service2.njk"
+        preview_path: "service2.html"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "layout.njk" }
           - { label: "Title Tag", name: "title", widget: "string", required: false, default: "" }
@@ -54,6 +56,7 @@ collections:
       - label: "Training Course Page"
         name: "service_training"
         file: "service3.njk"
+        preview_path: "service3.html"
         fields:
           - { label: "Layout", name: "layout", widget: "hidden", default: "layout.njk" }
           - { label: "Title Tag", name: "title", widget: "string", required: false, default: "" }
