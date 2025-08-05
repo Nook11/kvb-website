@@ -18,7 +18,7 @@
 
 body {
     font-family: 'Sarabun', sans-serif;
-    background-image: url('imges/blue gradient travel (Presentation (169)).png');
+    background-image: url('/imges/bg-main.png');
     background-size: cover;
     background-position: center center;
     background-attachment: fixed; 
@@ -372,4 +372,5 @@ footer .bi-facebook { color: #1877F2; }
     animation-delay: 0.3s;
 
 }
+
 
