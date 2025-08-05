@@ -1,0 +1,76 @@
+---
+layout: layout.njk
+title: บริการล้าง/ซ่อมแอร์ - KVB Co., Ltd.
+description: บริการล้างแอร์ ซ่อมแอร์ ติดตั้งแอร์ ทุกระบบ โดยทีมช่างมืออาชีพ
+keywords: ล้างแอร์, ซ่อมแอร์, ติดตั้งแอร์
+header_title: "Air Condition Service"
+header_subtitle: "บริการเกี่ยวกับเครื่องปรับอากาศครบวงจร"
+card1_image: "/imges/34592e4a4a45e1612b9259d5fcd11ac3.jpg"
+card1_title: "งานล้างแอร์ ทุกระบบ"
+card1_desc: "บริการล้างทำความสะอาดเครื่องปรับอากาศเพื่อประสิทธิภาพสูงสุด"
+card1_list:
+  - "สะอาด ปราศจากกลิ่นไม่พึงประสงค์"
+  - "ช่วยประหยัดค่าไฟฟ้า"
+  - "ยืดอายุการใช้งานของเครื่องปรับอากาศ"
+  - "ลดปัญหาการซ่อมแซมในอนาคต"
+  - "ใช้อะไหล่มาตรฐาน พร้อมรับประกันงาน"
+card2_image: "/imges/d376547e97b72f7f1902107156fab6cf.jpg"
+card2_title: "งานซ่อมและติดตั้งแอร์ ทุกระบบ"
+card2_desc: "แก้ไขปัญหาเครื่องปรับอากาศทุกอาการโดยช่างผู้ชำนาญการ"
+card2_list:
+  - "แอร์เสีย, แอร์ไม่ทำงาน, ไฟกระพริบ"
+  - "แอร์ไม่เย็น, มีแต่ลมออก"
+  - "แอร์มีน้ำหยด, น้ำแข็งเกาะ"
+  - "แอร์ทำงานเสียงดังผิดปกติ"
+  - "บริการติดตั้งแอร์ใหม่ทุกรุ่นทุกยี่ห้อ"
+---
+
+<section class="bg-white py-5">
+    <div class="container">
+        <div class="service-header text-white text-center mb-5">
+            <i class="bi bi-wind fs-1 mb-2"></i>
+            <h1 class="fw-bold">{{ header_title }}</h1>
+            <p class="lead">{{ header_subtitle }}</p>
+        </div>
+
+        <div class="card mb-5">
+            <div class="row g-0 align-items-center">
+                <div class="col-lg-5">
+                    <img src="{{ card1_image }}" class="img-fluid rounded-start h-100" alt="{{ card1_title }}" style="object-fit: cover; min-height: 400px;">
+                </div>
+                <div class="col-lg-7">
+                    <div class="card-body p-4 p-lg-5">
+                        <h4 class="card-title fw-bold text-primary">{{ card1_title }}</h4>
+                        <p class="card-text">{{ card1_desc }}</p>
+                        <ul class="list-group list-group-flush">
+                            {% for item in card1_list %}
+                                <li class="list-group-item"><i class="bi bi-check-lg text-success me-2"></i>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="card">
+            <div class="row g-0 align-items-center">
+                <div class="col-lg-7 order-lg-1">
+                    <div class="card-body p-4 p-lg-5">
+                        <h4 class="card-title fw-bold text-primary">{{ card2_title }}</h4>
+                        <p class="card-text">{{ card2_desc }}</p>
+                        <ul class="list-group list-group-flush">
+                            {% for item in card2_list %}
+                                <li class="list-group-item"><i class="bi bi-wrench-adjustable-circle-fill text-danger me-2"></i>{{ item }}</li>
+                            {% endfor %}
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-lg-5 order-lg-2">
+                     <img src="{{ card2_image }}" class="img-fluid rounded-end h-100" alt="{{ card2_title }}" style="object-fit: cover; min-height: 400px;">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
