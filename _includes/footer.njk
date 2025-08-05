@@ -1,0 +1,91 @@
+<footer class="text-center pt-5 pb-4">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 mb-4 mb-md-0 text-md-start">
+                <h5 class="fw-bold text-white">KVB Co., Ltd.</h5>
+                <p>ผู้ให้บริการด้านเครื่องปรับอากาศและจำหน่ายอุปกรณ์อุตสาหกรรมครบวงจร</p>
+            </div>
+            <div class="col-md-4 mb-4 mb-md-0">
+                <h5 class="fw-bold text-white">ติดต่อเรา</h5>
+                <ul class="list-unstyled">
+                    <li><i class="bi bi-telephone-fill me-2"></i><a href="tel:0897770926">089-777-0926</a></li>
+                    <li><i class="bi bi-envelope-fill me-2"></i><a
+                            href="mailto:laddawan@kvbservice.com">laddawan@kvbservice.com</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <hr class="text-white-50 my-4">
+        <p class="mb-0 text-white-50">&copy; KVB Co., Ltd. All Rights Reserved.</p>
+    </div>
+</footer>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        const partnerItems = document.querySelectorAll('.partner-item');
+        const displayName = document.getElementById('display-partner-name');
+        const displayDescription = document.getElementById('display-partner-description');
+
+        const carouselContainer = document.getElementById('productDetailCarousel');
+        const carouselInner = carouselContainer.querySelector('.carousel-inner');
+        const carouselIndicators = carouselContainer.querySelector('.carousel-indicators');
+
+        function updateDisplay(element) {
+            displayName.textContent = element.dataset.name;
+            displayDescription.textContent = element.dataset.description;
+
+            carouselInner.innerHTML = '';
+            carouselIndicators.innerHTML = '';
+
+            const galleryImages = element.dataset.gallery ? element.dataset.gallery.split(',').map(item => item.trim()) : [];
+
+            if (galleryImages.length > 0) {
+                galleryImages.forEach((imgSrc, index) => {
+                    const carouselItem = document.createElement('div');
+                    carouselItem.className = 'carousel-item';
+                    if (index === 0) {
+                        carouselItem.classList.add('active');
+                    }
+                    const img = document.createElement('img');
+                    img.src = imgSrc;
+                    img.className = 'd-block w-100';
+                    img.alt = `${element.dataset.name} image ${index + 1}`;
+                    carouselItem.appendChild(img);
+                    carouselInner.appendChild(carouselItem);
+
+                    const indicator = document.createElement('button');
+                    indicator.type = 'button';
+                    indicator.dataset.bsTarget = '#productDetailCarousel';
+                    indicator.dataset.bsSlideTo = index;
+                    if (index === 0) {
+                        indicator.classList.add('active');
+                    }
+                    carouselIndicators.appendChild(indicator);
+                });
+            }
+
+            if (galleryImages.length <= 1) {
+                carouselContainer.querySelector('.carousel-control-prev').style.display = 'none';
+                carouselContainer.querySelector('.carousel-control-next').style.display = 'none';
+            } else {
+                carouselContainer.querySelector('.carousel-control-prev').style.display = 'block';
+                carouselContainer.querySelector('.carousel-control-next').style.display = 'block';
+            }
+
+            partnerItems.forEach(item => item.classList.remove('active'));
+            element.classList.add('active');
+        }
+
+        partnerItems.forEach(item => {
+            item.addEventListener('click', function (e) {
+                e.preventDefault();
+                updateDisplay(this);
+            });
+        });
+
+        const initialActiveItem = document.querySelector('.partner-item.active');
+        if (initialActiveItem) {
+            updateDisplay(initialActiveItem);
+        }
+    });
+</script>
